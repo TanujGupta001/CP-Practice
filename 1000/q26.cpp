@@ -1,31 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    int tst;
-    cin>>tst;
-    while(tst--){
-        long long x,y,k;
-        cin >> x >> y >> k;
-        long long cnt = k;
-        long long initial_cnt = 1;
-        long long final = y * k + k;
-        bool first_move = true;
-
-        while(initial_cnt < final){
-            if(first_move){
-                initial_cnt--;
-                cnt++;
-                initial_cnt += x;
-                first_move = false;
-            }
-            else{
-                
-            }
-        }
-        cout << cnt << endl;
-        
+  int t;
+  cin>>t;
+  while(t--){
+    long long x,y,k;
+    cin>>x>>y>>k;
+    long long ele=(y*k)+k;
+    ele=ele-1;
+    if(ele%(x-1)==0){
+      
+      long long a=ele/(x-1);
+      a=a+k;
+      cout<<a;
     }
-    return 0;
+    else{
+      long long a=ele/(x-1);
+      a=a+1+k;
+      cout<<a;
+    }
+    cout<<endl;
+  }
 }

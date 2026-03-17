@@ -6,8 +6,7 @@ int main(){
     int tst;
     cin>>tst;
     while(tst--){
-        int n;
-        cin >> n;
+        
         
     }
     return 0;
